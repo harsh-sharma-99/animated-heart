@@ -1,0 +1,57 @@
+.App {
+  text-align: center;
+  background-color: lightblue;
+  height: 100vh;
+  display:flex;
+  align-items: center;
+  justify-content: center
+}
+.box{
+  height: 400px;
+  width: 300px;
+  border: 1px solid black;
+  padding: 2rem;
+  border-radius:10px
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .heart {
+    animation: heart-fade 6s linear !important;
+  }
+}
+
+@keyframes heart-fade {
+  0% {
+    opacity : 1;
+   }
+   50% {
+    opacity : 0;
+   }
+}
+
+.heart {
+    z-index : 999;
+    animation : heartfade 6s linear;
+    position : absolute;
+  }
+  .heart:before,
+  .heart:after {
+    content : "";
+    background-color : #fc2a62;
+    position : absolute;
+    height : 30px;
+    width : 45px;
+    border-radius : 15px 0px 0px 15px;
+  }
+  .heart:before {
+    transform : rotate(45deg);
+  }
+  .heart:after {
+    left : 10.5px;
+    transform : rotate(135deg);
+  }
+
+
+
+
+  
