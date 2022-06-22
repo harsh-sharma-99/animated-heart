@@ -28,8 +28,8 @@ function App() {
      heart.time = duration;
      heart.x = x;
      heart.y = y;
-     heart.bound = 30;
-     heart.direction = 1;
+     heart.bound = xBound;
+     heart.direction = xStart;
      heart.style.left = heart.x + "px";
      heart.style.top = heart.y + "px";
      heart.scale = scale;
@@ -41,7 +41,7 @@ function App() {
   }
 
   const handleClick = () => {
-    generateHeart(500, 500, null, null, 1);
+    generateHeart(500, 500, 30, 1, 1);
     var before = Date.now();
     var id = setInterval(frame, 5);
     setTimeout(() =>{
